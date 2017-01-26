@@ -1,10 +1,9 @@
 /*
  *
  *   INSPINIA - Responsive Admin Theme
- *   version 2.6
+ *   version 2.7
  *
  */
-
 
 $(document).ready(function () {
 
@@ -16,14 +15,14 @@ $(document).ready(function () {
         $('body').removeClass('body-small')
     }
 
-    // MetsiMenu
+    // MetisMenu
     $('#side-menu').metisMenu();
 
     // Collapse ibox function
     $('.collapse-link').on('click', function () {
         var ibox = $(this).closest('div.ibox');
         var button = $(this).find('i');
-        var content = ibox.find('div.ibox-content');
+        var content = ibox.children('.ibox-content');
         content.slideToggle(200);
         button.toggleClass('fa-chevron-up').toggleClass('fa-chevron-down');
         ibox.toggleClass('').toggleClass('border-bottom');
@@ -98,10 +97,10 @@ $(document).ready(function () {
 
     // Append config box / Only for demo purpose
     // Uncomment on server mode to enable XHR calls
-    // $.get("skin-config.html", function (data) {
-    //     if (!$('body').hasClass('no-skin-config'))
-    //         $('body').append(data);
-    // });
+    $.get("skin-config.html", function (data) {
+        if (!$('body').hasClass('no-skin-config'))
+            $('body').append(data);
+    });
 
     // Minimalize menu
     $('.navbar-minimalize').on('click', function () {
@@ -120,22 +119,22 @@ $(document).ready(function () {
     // Full height of sidebar
     function fix_height() {
         var heightWithoutNavbar = $("body > #wrapper").height() - 61;
-        $(".sidebard-panel").css("min-height", heightWithoutNavbar + "px");
+        $(".sidebar-panel").css("min-height", heightWithoutNavbar + "px");
 
-        var navbarHeigh = $('nav.navbar-default').height();
-        var wrapperHeigh = $('#page-wrapper').height();
+        var navbarheight = $('nav.navbar-default').height();
+        var wrapperHeight = $('#page-wrapper').height();
 
-        if (navbarHeigh > wrapperHeigh) {
-            $('#page-wrapper').css("min-height", navbarHeigh + "px");
+        if (navbarheight > wrapperHeight) {
+            $('#page-wrapper').css("min-height", navbarheight + "px");
         }
 
-        if (navbarHeigh < wrapperHeigh) {
+        if (navbarheight < wrapperHeight) {
             $('#page-wrapper').css("min-height", $(window).height() + "px");
         }
 
         if ($('body').hasClass('fixed-nav')) {
-            if (navbarHeigh > wrapperHeigh) {
-                $('#page-wrapper').css("min-height", navbarHeigh + "px");
+            if (navbarheight > wrapperHeight) {
+                $('#page-wrapper').css("min-height", navbarheight + "px");
             } else {
                 $('#page-wrapper').css("min-height", $(window).height() - 60 + "px");
             }
