@@ -12,20 +12,6 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "yiisoft/yii2-jui": "*",
-        "bower-asset/fontawesome": "*",
-        "bower-asset/ionrangeslider": "*",
-        "bower-asset/knob": "*",
-        "bower-asset/switchery": "*",
-        "bower-asset/cropper": "*",
-        "bower-asset/momentjs": "*",
-        "bower-asset/chosen": "*",
-        "bower-asset/jquery-sparkline": "*",
-        "bower-asset/flot": "*",
-        "bower-asset/flot.tooltip": "*",
-        "bower-asset/flot-spline": "*",
-        "bower-asset/jquery-timeago": "^1.5"
-
     },
     "autoload": {
         "psr-4": {
