@@ -36,7 +36,7 @@ class Menu extends \yii\widgets\Menu
             $template = ArrayHelper::getValue($item, 'template', $linkTemplate);
             $replace = !empty($item['icon']) ? [
                 '{url}' => Url::to($item['url']),
-                '{label}' => '<span>' . $item['label'] . '</span>',
+                '{label}' => '<span class="nav-label">' . $item['label'] . '</span>',
                 '{icon}' => '<i class="' . $item['icon'] . '"></i> '
             ] : [
                 '{url}' => Url::to($item['url']),
@@ -47,7 +47,7 @@ class Menu extends \yii\widgets\Menu
         } else {
             $template = ArrayHelper::getValue($item, 'template', $labelTemplate);
             $replace = !empty($item['icon']) ? [
-                '{label}' => '<span class="nav-label">' . $item['label'] . '</span>',
+                '{label}' => '<span>' . $item['label'] . '</span>',
                 '{icon}' => '<i class="' . $item['icon'] . '"></i> '
             ] : [
                 '{label}' => '<span>' . $item['label'] . '</span>',
