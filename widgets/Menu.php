@@ -25,8 +25,8 @@ class Menu extends \yii\widgets\Menu
     protected function renderItem($item)
     {
         if (isset($item['items'])) {
-            $labelTemplate = '<a href="{url}">{label} <i class="fa arrow"></i></a>';
-            $linkTemplate = '<a href="{url}">{icon} {label} <i class="fa arrow"></i></a>';
+            $labelTemplate = '<a href="{url}">{label} <span class="fa arrow"></span></a>';
+            $linkTemplate = '<a href="{url}">{icon} {label} <span class="fa arrow"></span></a>';
         } else {
             $labelTemplate = $this->labelTemplate;
             $linkTemplate = $this->linkTemplate;
