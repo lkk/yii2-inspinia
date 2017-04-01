@@ -8,13 +8,14 @@ namespace lkk\inspinia;
  */
 class FlotAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@bower/flot';
+    public $sourcePath = '@vendor/lkk/yii2-inspinia/assets';
     public $js = [
-        'jquery.flot.js',
-        'jquery.flot.resize.js',
-        'jquery.flot.pie.js',
-        'jquery.flot.symbol.js',
-        'jquery.flot.time.js'
+        'js/plugins/flot/jquery.flot.js',
+        'js/plugins/flot/jquery.flot.resize.js',
+        'js/plugins/flot/jquery.flot.pie.js',
+        'js/plugins/flot/jquery.flot.symbol.js',
+        'js/plugins/flot/jquery.flot.time.js',
+        'js/plugins/flot/jquery.flot.spline.js',
     ];
 
     public $depends = [

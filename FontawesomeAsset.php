@@ -8,8 +8,8 @@ namespace lkk\inspinia;
  */
 class FontawesomeAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@bower/fontawesome';
+    public $sourcePath = '@vendor/lkk/yii2-inspinia/assets';
     public $css = [
-        'css/font-awesome.min.css',
+        'font-awesome/css/font-awesome.min.css',
     ];
 }
