@@ -21,6 +21,19 @@ main.php增加
 
 或者 将vendor/lkk/yii2-inspinia/views下的文件，替换自己views下的文件
 
+加载AppAsset
+
+编辑 backend\assets\AppAsset.php
+
+    class AppAsset extends AssetBundle
+    {
+        ...
+        public $depends = [
+            'lkk\inspinia\AppAsset',
+        ];
+    }
+
+
 如指定页面error使用layouts/empty，方法如下
 
     public function beforeAction($action)
@@ -38,7 +51,7 @@ inspinia Panel使用
 
     <?php Panel::begin([
         'title'=>$this->title,
-        'description'=> '标题',
+        'description'=> '描述',
         'toolbar'=>[
             ...
         ]

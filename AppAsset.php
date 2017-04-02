@@ -6,7 +6,6 @@ use yii\web\AssetBundle;
 
 class AppAsset extends AssetBundle
 {
-
     public $sourcePath = '@vendor/lkk/yii2-inspinia/assets';
     public $css = [
         'css/animate.css',
@@ -20,7 +19,6 @@ class AppAsset extends AssetBundle
         'js/ajax-modal-popup.js'
     ];
     public $depends = [
-        //'yii\jui\JuiAsset',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
         'lkk\inspinia\FontawesomeAsset'
