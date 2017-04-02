@@ -2,12 +2,12 @@
 namespace lkk\inspinia;
 
 /**
- * Class ToastrAsset
+ * Class TouchSpinAsset
  *
- * Demo: toastr_notifications.html
+ * Demo: form_advanced.html
  * @package lkk\inspinia
  */
-class ToastrAsset extends \yii\web\AssetBundle
+class TouchSpinAsset extends \yii\web\AssetBundle
 {
     public $sourcePath = '@vendor/lkk/yii2-inspinia/assets';
     public $css = [
