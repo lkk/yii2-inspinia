@@ -25,8 +25,8 @@ class Menu extends \yii\widgets\Menu
     protected function renderItem($item)
     {
         if (isset($item['items'])) {
-            $labelTemplate = '<a href="{url}">{label} <i class="fa fa-angle-left pull-right"></i></a>';
-            $linkTemplate = '<a href="{url}">{icon} {label} <i class="fa fa-angle-left pull-right"></i></a>';
+            $labelTemplate = '<a href="{url}">{label} <span class="fa arrow"></span></a>';
+            $linkTemplate = '<a href="{url}">{icon} {label} <span class="fa arrow"></span></a>';
         } else {
             $labelTemplate = $this->labelTemplate;
             $linkTemplate = $this->linkTemplate;
@@ -36,7 +36,7 @@ class Menu extends \yii\widgets\Menu
             $template = ArrayHelper::getValue($item, 'template', $linkTemplate);
             $replace = !empty($item['icon']) ? [
                 '{url}' => Url::to($item['url']),
-                '{label}' => '<span>' . $item['label'] . '</span>',
+                '{label}' => '<span class="nav-label">' . $item['label'] . '</span>',
                 '{icon}' => '<i class="' . $item['icon'] . '"></i> '
             ] : [
                 '{url}' => Url::to($item['url']),
