@@ -16,7 +16,6 @@ class AppAsset extends AssetBundle
         'js/plugins/slimscroll/jquery.slimscroll.min.js',
         'js/inspinia.js',
         'js/plugins/pace/pace.min.js',
-        'js/ajax-modal-popup.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
